@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "apimfunction1001",
+        "description": "Import from \"apimfunction1001\" Function App",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://apimanagement1001.azure-api.net/apimfunction1001"
+        }
+    ],
+    "paths": {
+        "/customer/{customerName}": {
+            "get": {
+                "summary": "HttpTrigger1",
+                "operationId": "get-httptrigger1",
+                "parameters": [
+                    {
+                        "name": "customerName",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "post": {
+                "summary": "HttpTrigger1",
+                "operationId": "post-httptrigger1",
+                "parameters": [
+                    {
+                        "name": "customerName",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": ""
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
